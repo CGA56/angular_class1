@@ -1,6 +1,6 @@
 # Ejercicio1
 
-Proyecto de introduccion a Angular.
+Proyecto de introduccion a Angular Kitro News.
 
 ## Development server
 
