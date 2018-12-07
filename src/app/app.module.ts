@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 
 import { MainNewComponent } from './main-news/main-news.component';
 import { NewNavBarComponent } from './nav-news/nav-news.component';
-import { VideosComponent} from './videos-news/videos-news.component';
+import { VideosComponent } from './videos-news/videos-news.component';
 import { SurveyComponent } from './encuesta-news/survey-news.component';
+import { VideoDetalleComponent } from './video-detalle/video-detalle.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { SurveyComponent } from './encuesta-news/survey-news.component';
     NewNavBarComponent,
     VideosComponent,
     SurveyComponent,
+    VideoDetalleComponent
   ],
   imports: [
     BrowserModule,
