@@ -6,4 +6,9 @@ import {Component} from '@angular/core';
 })
 export class SurveyComponent{
 
+    // constructor(public nombre:string,public edad:number,public comentarios:string){}
+    
+    submitted = false;
+
+    onSubmit() { this.submitted = true; }
 }
