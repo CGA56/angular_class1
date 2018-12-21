@@ -10,5 +10,11 @@ export class SurveyComponent{
     
     submitted = false;
 
-    onSubmit() { this.submitted = true; }
+    onSubmit() { this.submitted = true; 
+        console.log('hola');
+    }
+
+    // setData(){
+    //     console.log('paso');
+    // }
 }

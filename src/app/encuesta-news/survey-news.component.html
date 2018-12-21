@@ -4,12 +4,12 @@
         <form>
           <div class="form-group">
             <label for="name">Nombre mascota</label>
-            <input type="text" class="form-control" id="txtNombre" required>
+            <input type="text" class="form-control"  name="txtNombre"id="txtNombre" required>
           </div>
      
           <div class="form-group">
             <label for="alterEgo">Edad</label>
-            <input type="number" class="form-control" id="txtEdad">
+            <input type="number" class="form-control" name="txtEdad" id="txtEdad">
           </div>
 
           <div class="form-group">
@@ -18,7 +18,7 @@
           </div>
 
      
-          <button type="submit" class="btn btn-success">Submit</button>
+          <button type="submit"  (ngSubmit)="onSubmit()"  class="btn btn-success">Submit</button>
      
         </form>
     </div>

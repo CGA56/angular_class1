@@ -10,6 +10,7 @@ export class NewNavBarComponent{
     {name:'Inicio',path:'/'},
     {name:'Videos',path:'videos'},
     {name:'Encuesta',path:'survey'},
+    {name:'Formulario React',path:'createAcount'}
     
 
      
