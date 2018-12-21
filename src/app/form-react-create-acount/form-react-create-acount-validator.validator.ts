@@ -1,12 +1,13 @@
 import { FormControl, FormGroup, NgForm, FormGroupDirective } from '@angular/forms';
 
-export class PasswordValidator {
+export class validadores {
  
   static areEqual(formGroup: FormGroup) {
     let value;
     let valid = true;
+    console.log(formGroup.get("name"));
     for (let key in formGroup.controls) {
-      if (formGroup.controls.hasOwnProperty(key)) {
+      if (formGroup.controls. hasOwnProperty(key)) {
         let control: FormControl = <FormControl>formGroup.controls[key];
 
         if (value === undefined) {
