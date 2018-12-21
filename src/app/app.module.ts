@@ -12,6 +12,7 @@ import { SurveyComponent } from './encuesta-news/survey-news.component';
 import { VideoDetalleComponent } from './video-detalle/video-detalle.component';
 import { FormReactCreateAcountComponent } from './form-react-create-acount/form-react-create-acount.component';
 import { CompPoComponent } from './comp-po/comp-po.component';
+import { FeriadosServiceComponent } from './feriados-service/feriados-service.component';
  
 
 
@@ -27,7 +28,8 @@ import { CompPoComponent } from './comp-po/comp-po.component';
     SurveyComponent,
     VideoDetalleComponent,
     FormReactCreateAcountComponent,
-    CompPoComponent
+    CompPoComponent,
+    FeriadosServiceComponent
   ],
   imports: [
     BrowserModule,

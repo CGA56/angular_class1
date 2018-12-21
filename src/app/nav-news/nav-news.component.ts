@@ -10,7 +10,8 @@ export class NewNavBarComponent{
     {name:'Inicio',path:'/'},
     {name:'Videos',path:'videos'},
     {name:'Encuesta',path:'survey'},
-    {name:'Formulario React',path:'createAcount'}
+    {name:'Formulario React',path:'createAcount'},
+    {name:'ver feriados del año',path:'verFeriados'}
     
 
      
