@@ -8,6 +8,6 @@ Run  `npm install` para instalar los modulos de node.
 
 ## Development server
 
-Run `ng serve --open` para hacer inciar de manera automatica el proyecto desde el navegador.
+Run `ng serve --open` para  inciar de manera automatica el proyecto desde el navegador.
 
  
