@@ -1,58 +1,59 @@
-<form [formGroup]="profileForm" novalidate>
+<h1 class="text-center">Formulario de actualizacion de datos</h1>
+<hr>
+<div class="d-flex justify-content-center align-items-center container ">
+  <div class="row ">
 
-  <label>
-    Nombre:
-    <input type="text" id="name" name="name" formControlName="name">
-  </label>
-  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-    <div *ngIf="name.errors.required">
-      El nombre es obigatorio.
-    </div>
+    <form [formGroup]="profileForm">
+
+      <div class="form-group">
+        <label for="name" class="control-label">
+          Nombre:
+          <!-- <input type="text" class="form-control" id="name" name="name" formControlNasme="name"> -->
+
+          <select class="form-control" id="name" name="name" formControlName="name" title="Nombre usuario" (change)="onSelect($event)"
+            required>
+            <option value="" disabled selected> Selecciona al usuario</option>
+            <option *ngFor="let persona of usuariosCollection" [value]="persona|json">{{persona.nombre}}</option>
+          </select>
+        </label>
+        <br>
+        <img id="avatar" name="avatar" class="img-thumbnail" src="{{urlAvatar}}" alt="Imagen avatar"
+          title="Imagen avatar">
+      </div>
+
+      <div class="form-group">
+        <label for="lastName" class="control-label">
+          Apellido:
+          <input type="text" readonly class="form-control" value="{{apellidoUser}}" id="lastName" name="lastName"
+            formControlName="lastName" title="Apellido ">
+        </label>
+        <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+          <div *ngIf="lastName.errors.required">
+            El apellido es obligatorio.
+          </div>
+        </div>
+      </div>
+      <div formGroupName="emailsGroup" class="form-group">
+
+        <label for="email" class="control-label">
+          Correo Electronico:
+          <input type="text" title="Correo electronico" class="form-control" value="{{correo}}" id="email" name="email"
+            formControlName="email">
+        </label>
+        <br>
+        <label for="email2" class="control-label">
+          Repita el correo electronico:
+          <input type="text" title="Repetir correo electronico" class="form-control" id="email2" name="email2"
+            formControlName="email2">
+        </label>
+        <div *ngIf="profileForm.get('emailsGroup').errors">
+          El correo electronico debe ser identico.
+        </div>
+        <br>
+        <button type="reset" title="Actualizar datos" class="btn btn-default" [disabled]="!profileForm.valid && profileForm.get('emailsGroup').status"
+          (click)="onSubmit()">Actualizar</button>
+      </div>
+
+    </form>
   </div>
-
-  <label>
-    Apellido:
-    <input type="text" id="lastName" name="lastName" formControlName="lastName">
-  </label>
-  <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
-    <div *ngIf="lastName.errors.required">
-      El apellido es obligatorio.
-    </div>
-  </div>
- 
-  
- <div formGroupName="emailsGroup">
-
-  <label>
-    Correo Electronico:
-    <input type="text" id="email" name="email" formControlName="email">
-  </label>
-  <label>
-    Repita el correo electronico:
-    <input type="text" id="email2" name="email2" formControlName="email2">
-  </label>
-   <div *ngIf="profileForm.get('emailsGroup').errors">
-     El correo electronico debe ser identico.
-    </div>
-  {{profileForm.get('emailsGroup').errors|json}}
-
-
- </div>
-  
-
-
-
-
-
- 
-  <!-- <label>
-    Contraseña :
-    <input type="text" id="password" name="password" formControlName="password">
-  </label> -->
-
-  
-  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
-
-
-
-</form>
+</div>

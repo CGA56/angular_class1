@@ -5,7 +5,7 @@ export class validadores {
   static areEqual(formGroup: FormGroup) {
     let value;
     let valid = true;
-    console.log(formGroup.get("name"));
+ 
     for (let key in formGroup.controls) {
       if (formGroup.controls. hasOwnProperty(key)) {
         let control: FormControl = <FormControl>formGroup.controls[key];
@@ -29,4 +29,5 @@ export class validadores {
       areEqual: true
     };
   }
+  
 }

@@ -8,10 +8,8 @@ export class NewNavBarComponent{
 
   public navBarItem :any=[
     {name:'Inicio',path:'/'},
-    {name:'Videos',path:'videos'},
-    {name:'Encuesta',path:'survey'},
-    {name:'Formulario React',path:'createAcount'},
-    {name:'ver feriados del año',path:'verFeriados'}
+    {name:'Formulario React',path:'createAcount'}
+ 
     
 
      
